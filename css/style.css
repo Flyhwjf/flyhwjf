@@ -506,4 +506,164 @@ code {
 .archive-item h2 a:hover {
   color: #c85c37;
 }
+
+.archive-page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px 24px 50px;
+}
+
+.archive-tools {
+  margin-bottom: 30px;
+}
+
+.archive-search-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 3px solid #2b2b2b;
+  background: #fffdf4;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 5px 5px 0 #2b2b2b;
+  margin-bottom: 18px;
+}
+
+.archive-search-input:focus {
+  background: #f9d65c;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  border: 2px solid #2b2b2b;
+  background: #fffdf4;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #2b2b2b;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  background: #f9d65c;
+}
+
+.filter-btn.active {
+  background: #c85c37;
+  color: white;
+}
+
+.archive-count {
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.archive-month {
+  margin-bottom: 34px;
+}
+
+.archive-month-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b2b2b;
+  color: #fff8e7;
+  border: 3px solid #2b2b2b;
+  box-shadow: 7px 7px 0 #c85c37;
+  padding: 12px 18px;
+  margin-bottom: 22px;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.archive-month-title small {
+  font-size: 14px;
+  color: #f5dca6;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 110px;
+  gap: 18px;
+  align-items: start;
+  background: #fffdf4;
+  border: 3px solid #2b2b2b;
+  box-shadow: 7px 7px 0 #2b2b2b;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.archive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0 #c85c37;
+}
+
+.archive-index {
+  background: #f9d65c;
+  border: 3px solid #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.archive-main h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.archive-main h2 a:hover {
+  color: #c85c37;
+}
+
+.archive-category {
+  justify-self: end;
+  background: #fff8e7;
+  border: 2px solid #2b2b2b;
+  box-shadow: 3px 3px 0 #2b2b2b;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.no-result {
+  display: none;
+  background: #f9d65c;
+  border: 3px solid #2b2b2b;
+  box-shadow: 6px 6px 0 #2b2b2b;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .archive-item {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-index {
+    width: 80px;
+  }
+
+  .archive-category {
+    justify-self: start;
+  }
+
+  .archive-month-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
 }
