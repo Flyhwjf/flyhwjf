@@ -26,53 +26,181 @@
 
   <div class="center-title">
     <h1>文章归档</h1>
-    <p>这里保存所有文章。首页只展示最新 5 篇，其余文章都可以在这里找到。</p>
+    <p>所有文章都收在这里。可以按关键词搜索，也可以按分类筛选。</p>
   </div>
 
-  <section class="panel">
-    <h2>2026 年 6 月</h2>
+  <!-- 归档工具栏 -->
+  <section class="archive-tools panel">
+    <h2>查找文章</h2>
 
-    <article class="archive-item">
-      <h2>
-        <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
-      </h2>
-      <div class="meta">2026-06-07 / 博客搭建 / GitHub Pages</div>
-      <p class="summary">
-        记录我如何用 GitHub Pages 搭建自己的第一个个人博客。
-      </p>
+    <input
+      type="text"
+      id="archiveSearchInput"
+      class="archive-search-input"
+      placeholder="输入关键词，例如 Python、六级、GitHub、专业课"
+    >
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">全部</button>
+      <button class="filter-btn" data-category="编程学习">编程学习</button>
+      <button class="filter-btn" data-category="英语学习">英语学习</button>
+      <button class="filter-btn" data-category="专业课程">专业课程</button>
+      <button class="filter-btn" data-category="生活随笔">生活随笔</button>
+      <button class="filter-btn" data-category="博客搭建">博客搭建</button>
+    </div>
+
+    <p class="archive-count">
+      当前显示：<span id="archiveCount">0</span> 篇文章
+    </p>
+  </section>
+
+  <!-- 2026 年 6 月 -->
+  <section class="archive-month">
+    <div class="archive-month-title">
+      <span>2026 年 6 月</span>
+      <small>创刊号</small>
+    </div>
+
+    <article
+      class="archive-item"
+      data-title="我的第一篇博客 GitHub Pages 搭建记录"
+      data-category="博客搭建"
+      data-keywords="GitHub Pages 博客 搭建 部署 index html"
+    >
+      <div class="archive-index">001</div>
+
+      <div class="archive-main">
+        <h2>
+          <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
+        </h2>
+
+        <div class="meta">
+          2026-06-07 / 博客搭建 / GitHub Pages
+        </div>
+
+        <p class="summary">
+          记录我如何创建仓库、配置 GitHub Pages，并搭建出自己的第一个个人博客。
+        </p>
+
+        <a class="read-more" href="post/my-first-blog.html">打开档案 →</a>
+      </div>
+
+      <div class="archive-category">博客搭建</div>
     </article>
 
-    <article class="archive-item">
-      <h2>
-        <a href="#">Python 学习笔记：列表复制问题</a>
-      </h2>
-      <div class="meta">待更新 / 编程学习 / Python</div>
-      <p class="summary">
-        记录 Python 中列表复制相关的问题。
-      </p>
+    <article
+      class="archive-item"
+      data-title="Python 学习笔记 列表复制问题"
+      data-category="编程学习"
+      data-keywords="Python 列表 复制 [[0,0]] 可变对象 引用"
+    >
+      <div class="archive-index">002</div>
+
+      <div class="archive-main">
+        <h2>
+          <a href="#">Python 学习笔记：列表复制问题</a>
+        </h2>
+
+        <div class="meta">
+          待更新 / 编程学习 / Python
+        </div>
+
+        <p class="summary">
+          记录 Python 中 <code>[[0,0]] * n</code> 这种写法为什么可能导致多个元素一起变化。
+        </p>
+
+        <a class="read-more" href="#">待更新 →</a>
+      </div>
+
+      <div class="archive-category">编程学习</div>
     </article>
 
-    <article class="archive-item">
-      <h2>
-        <a href="#">英语六级作文开头积累</a>
-      </h2>
-      <div class="meta">待更新 / 英语学习 / CET-6</div>
-      <p class="summary">
-        整理六级作文中比较自然、好用的开头表达。
-      </p>
+    <article
+      class="archive-item"
+      data-title="英语六级作文开头积累"
+      data-category="英语学习"
+      data-keywords="英语 六级 CET6 作文 开头 模板 写作"
+    >
+      <div class="archive-index">003</div>
+
+      <div class="archive-main">
+        <h2>
+          <a href="#">英语六级作文开头积累</a>
+        </h2>
+
+        <div class="meta">
+          待更新 / 英语学习 / CET-6
+        </div>
+
+        <p class="summary">
+          整理一些六级作文中自然、好用、不那么模板化的开头表达。
+        </p>
+
+        <a class="read-more" href="#">待更新 →</a>
+      </div>
+
+      <div class="archive-category">英语学习</div>
     </article>
 
-    <article class="archive-item">
-      <h2>
-        <a href="#">专业课程学习笔记</a>
-      </h2>
-      <div class="meta">待更新 / 专业课 / 学习笔记</div>
-      <p class="summary">
-        记录课堂公式、推导过程和知识点总结。
-      </p>
+    <article
+      class="archive-item"
+      data-title="专业课程学习笔记"
+      data-category="专业课程"
+      data-keywords="专业课 课程 笔记 公式 推导 学习"
+    >
+      <div class="archive-index">004</div>
+
+      <div class="archive-main">
+        <h2>
+          <a href="#">专业课程学习笔记</a>
+        </h2>
+
+        <div class="meta">
+          待更新 / 专业课程 / 学习笔记
+        </div>
+
+        <p class="summary">
+          记录课堂公式、推导过程和自己终于想明白的知识点。
+        </p>
+
+        <a class="read-more" href="#">待更新 →</a>
+      </div>
+
+      <div class="archive-category">专业课程</div>
+    </article>
+
+    <article
+      class="archive-item"
+      data-title="生活随笔 把今天存档"
+      data-category="生活随笔"
+      data-keywords="生活 随笔 日常 记录 总结"
+    >
+      <div class="archive-index">005</div>
+
+      <div class="archive-main">
+        <h2>
+          <a href="#">生活随笔：把今天存档</a>
+        </h2>
+
+        <div class="meta">
+          待更新 / 生活随笔 / 日常记录
+        </div>
+
+        <p class="summary">
+          偶尔记录一些生活、想法和阶段总结，把普通的一天也留下痕迹。
+        </p>
+
+        <a class="read-more" href="#">待更新 →</a>
+      </div>
+
+      <div class="archive-category">生活随笔</div>
     </article>
 
   </section>
+
+  <p id="noArchiveResult" class="no-result">
+    没有找到符合条件的文章。
+  </p>
 
 </main>
 
@@ -80,5 +208,6 @@
   © 2026 枫的学习档案馆 · Powered by GitHub Pages
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
