@@ -2,13 +2,80 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的第一篇博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一篇博客：GitHub Pages 搭建记录</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <h1>我的第一篇博客</h1>
-  <p>今天我成功用 GitHub Pages 搭建了自己的个人博客。</p>
-  <p>以后我会在这里记录学习笔记、编程过程和一些生活想法。</p>
 
-  <p><a href="../index.html">返回首页</a></p>
+<body>
+
+  <header class="top-bar">
+    <div class="logo">FENG.ARCHIVE</div>
+
+    <nav class="nav">
+      <a href="../index.html">首页</a>
+      <a href="../index.html#articles">文章</a>
+      <a href="../index.html#map">学习地图</a>
+      <a href="../index.html#tags">标签</a>
+      <a href="../index.html#about">关于</a>
+    </nav>
+  </header>
+
+  <main class="article-page">
+
+    <article class="article article-content">
+      <h1>我的第一篇博客：GitHub Pages 搭建记录</h1>
+
+      <div class="meta">2026-06-07 / 博客搭建 / GitHub Pages</div>
+
+      <p>
+        今天我成功用 GitHub Pages 搭建了自己的第一个个人博客。
+        这个博客目前还很简单，但它已经可以作为一个正式的学习记录空间使用了。
+      </p>
+
+      <p>
+        我先创建了 GitHub 仓库，然后新建了首页文件 <code>index.html</code>，
+        接着通过 GitHub Pages 把它部署成一个可以访问的网站。
+      </p>
+
+      <p>
+        后来我把首页设计成了复古档案馆风格，左边放个人信息，中间放文章列表，
+        右边放标签、归档、更新记录等工具区。
+      </p>
+
+      <h2>目前的博客结构</h2>
+
+      <pre><code>flyhwjf/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── post/
+│   └── my-first-blog.html
+└── assets/
+    └── images/</code></pre>
+
+      <p>
+        这样拆分以后，首页负责内容结构，CSS 文件负责样式，JavaScript 文件负责搜索等交互功能。
+        后面如果文章变多，也不会全部挤在一个文件里。
+      </p>
+
+      <h2>后续计划</h2>
+
+      <p>
+        接下来我准备继续添加 Python 学习笔记、英语六级作文积累、专业课程笔记等内容。
+        这个博客会慢慢变成我的学习档案馆。
+      </p>
+
+      <a class="read-more" href="../index.html">← 返回首页</a>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 枫的学习档案馆 · Powered by GitHub Pages
+  </footer>
+
 </body>
 </html>
