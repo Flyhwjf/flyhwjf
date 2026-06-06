@@ -9,223 +9,249 @@
 
 <body>
 
-  <header class="top-bar">
-    <div class="logo">FENG.ARCHIVE</div>
+<header class="top-bar">
+  <div class="logo">FENG.ARCHIVE</div>
 
-    <nav class="nav">
-      <a href="index.html">首页</a>
-      <a href="#articles">文章</a>
-      <a href="#map">学习地图</a>
-      <a href="#tags">标签</a>
-      <a href="#about">关于</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="index.html">首页</a>
+    <a href="#articles">最新文章</a>
+    <a href="archive.html">文章归档</a>
+    <a href="#map">学习地图</a>
+    <a href="#tags">标签</a>
+    <a href="#about">关于</a>
+  </nav>
+</header>
 
-  <main class="layout">
+<main class="layout">
 
-    <!-- 左栏：个人档案 -->
-    <aside class="left">
+  <!-- 左栏：个人档案 -->
+  <aside class="left">
 
-      <section class="panel profile-card">
-        <div class="avatar">枫</div>
-        <div class="name">枫</div>
-        <div class="motto">学习中，请勿打扰</div>
+    <section class="panel profile-card">
+      <div class="avatar">枫</div>
+      <div class="name">枫</div>
+      <div class="motto">学习中，请勿打扰</div>
 
-        <p class="profile-text">
-          一名学生。这个博客用来存放学习笔记、编程记录、英语积累和一些突然冒出来的想法。
-        </p>
+      <p class="profile-text">
+        一名学生。这个博客用来存放学习笔记、编程记录、英语积累和一些突然冒出来的想法。
+      </p>
 
-        <ul class="info-list">
-          <li><strong>身份：</strong>学生</li>
-          <li><strong>方向：</strong>编程 / 英语 / 专业课</li>
-          <li><strong>状态：</strong>持续施工中</li>
-          <li><strong>网站：</strong>GitHub Pages</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>本周目标</h2>
-        <ul class="check-list">
-          <li>整理一篇 Python 笔记</li>
-          <li>更新一篇英语六级作文积累</li>
-          <li>复习一节专业课内容</li>
-          <li>完善博客文章链接</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>学习进度</h2>
-
-        <div class="progress-box">
-          <div class="progress-title">
-            <span>Python</span>
-            <span>45%</span>
-          </div>
-          <div class="bar"><span style="width: 45%;"></span></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-title">
-            <span>英语六级</span>
-            <span>60%</span>
-          </div>
-          <div class="bar"><span style="width: 60%;"></span></div>
-        </div>
-
-        <div class="progress-box">
-          <div class="progress-title">
-            <span>专业课程</span>
-            <span>35%</span>
-          </div>
-          <div class="bar"><span style="width: 35%;"></span></div>
-        </div>
-      </section>
-
-    </aside>
-
-    <!-- 中栏：主要内容 -->
-    <section class="middle" id="articles">
-
-      <div class="center-title">
-        <h1>枫的学习档案馆</h1>
-        <p>把混乱的知识，一点点整理成可以回头看的东西。</p>
-      </div>
-
-      <article class="article pinned" data-title="GitHub Pages 博客搭建记录">
-        <h2>
-          <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
-        </h2>
-        <div class="meta">2026-06-07 / 博客搭建 / GitHub Pages</div>
-        <p class="summary">
-          记录我如何用 GitHub Pages 搭建自己的第一个个人博客，从创建仓库到部署成功。
-        </p>
-        <a class="read-more" href="post/my-first-blog.html">继续阅读 →</a>
-      </article>
-
-      <article class="article" data-title="Python 学习笔记 列表复制问题">
-        <h2>
-          <a href="#">Python 学习笔记：列表复制问题</a>
-        </h2>
-        <div class="meta">待更新 / 编程学习 / Python</div>
-        <p class="summary">
-          记录 Python 中 <code>[[0,0]] * n</code> 这种写法为什么可能导致多个元素一起变化。
-        </p>
-        <a class="read-more" href="#">待更新 →</a>
-      </article>
-
-      <article class="article" data-title="英语六级作文开头积累">
-        <h2>
-          <a href="#">英语六级作文开头积累</a>
-        </h2>
-        <div class="meta">待更新 / 英语学习 / CET-6</div>
-        <p class="summary">
-          整理一些六级作文中比较自然、好用、不那么模板化的开头表达。
-        </p>
-        <a class="read-more" href="#">待更新 →</a>
-      </article>
-
-      <article class="article" data-title="专业课程学习笔记">
-        <h2>
-          <a href="#">专业课程学习笔记</a>
-        </h2>
-        <div class="meta">待更新 / 专业课 / 学习笔记</div>
-        <p class="summary">
-          用来记录课堂公式、推导过程和一些终于想明白的知识点。
-        </p>
-        <a class="read-more" href="#">待更新 →</a>
-      </article>
-
-      <section class="panel" id="map">
-        <h2>学习地图</h2>
-
-        <div class="map-grid">
-          <div class="map-card">
-            <h3>编程学习</h3>
-            <p>Python、代码问题、算法笔记、项目记录。</p>
-          </div>
-
-          <div class="map-card">
-            <h3>英语六级</h3>
-            <p>作文模板、听力方法、阅读技巧、翻译积累。</p>
-          </div>
-
-          <div class="map-card">
-            <h3>专业课程</h3>
-            <p>课堂笔记、公式推导、知识点总结。</p>
-          </div>
-
-          <div class="map-card">
-            <h3>生活随笔</h3>
-            <p>偶尔记录一些生活、想法和阶段总结。</p>
-          </div>
-        </div>
-      </section>
-
+      <ul class="info-list">
+        <li><strong>身份：</strong>学生</li>
+        <li><strong>方向：</strong>编程 / 英语 / 专业课</li>
+        <li><strong>状态：</strong>持续施工中</li>
+        <li><strong>网站：</strong>GitHub Pages</li>
+      </ul>
     </section>
 
-    <!-- 右栏：工具区 -->
-    <aside class="right">
+    <section class="panel">
+      <h2>本周目标</h2>
+      <ul class="check-list">
+        <li>整理一篇 Python 笔记</li>
+        <li>更新一篇英语六级作文积累</li>
+        <li>复习一节专业课内容</li>
+        <li>完善博客文章链接</li>
+      </ul>
+    </section>
 
-      <section class="note">
-        <h3>今日便签</h3>
-        <p>这个博客刚刚开张。先不追求完美，先让它活起来。</p>
-      </section>
+    <section class="panel">
+      <h2>学习进度</h2>
 
-      <section class="panel search-box">
-        <h2>搜索文章</h2>
-        <input type="text" id="searchInput" placeholder="输入关键词，例如 Python">
-      </section>
+      <div class="progress-box">
+        <div class="progress-title">
+          <span>Python</span>
+          <span>45%</span>
+        </div>
+        <div class="bar"><span style="width: 45%;"></span></div>
+      </div>
 
-      <section class="panel" id="tags">
-        <h2>标签墙</h2>
-        <span class="tag">Python</span>
-        <span class="tag">英语六级</span>
-        <span class="tag">专业课程</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">学习笔记</span>
-        <span class="tag">生活随笔</span>
-      </section>
+      <div class="progress-box">
+        <div class="progress-title">
+          <span>英语六级</span>
+          <span>60%</span>
+        </div>
+        <div class="bar"><span style="width: 60%;"></span></div>
+      </div>
 
-      <section class="panel">
-        <h2>文章归档</h2>
-        <ul class="archive-list">
-          <li>2026 年 6 月</li>
-          <li>待更新</li>
-        </ul>
-      </section>
+      <div class="progress-box">
+        <div class="progress-title">
+          <span>专业课程</span>
+          <span>35%</span>
+        </div>
+        <div class="bar"><span style="width: 35%;"></span></div>
+      </div>
+    </section>
 
-      <section class="panel">
-        <h2>友情链接</h2>
-        <ul class="link-list">
-          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-          <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
-        </ul>
-      </section>
+  </aside>
 
-      <section class="panel" id="about">
-        <h2>关于本站</h2>
-        <p>
-          这里不是精装修样板间，而是一个慢慢堆知识、堆想法、堆成长痕迹的小房间。
-        </p>
-      </section>
+  <!-- 中栏：最新文章 -->
+  <section class="middle" id="articles">
 
-      <section class="panel">
-        <h2>更新记录</h2>
-        <ul class="update-list">
-          <li>2026-06-07：博客首页建立</li>
-          <li>2026-06-07：加入复古档案馆风格</li>
-          <li>待更新：添加更多文章页面</li>
-        </ul>
-      </section>
+    <div class="center-title">
+      <h1>枫的学习档案馆</h1>
+      <p>这里展示最新 5 篇文章，更多内容可以进入文章归档查看。</p>
+    </div>
 
-    </aside>
+    <!-- 最新文章 1 -->
+    <article class="article pinned" data-title="GitHub Pages 博客搭建记录">
+      <h2>
+        <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
+      </h2>
+      <div class="meta">2026-06-07 / 博客搭建 / GitHub Pages</div>
+      <p class="summary">
+        记录我如何用 GitHub Pages 搭建自己的第一个个人博客，从创建仓库到部署成功。
+      </p>
+      <a class="read-more" href="post/my-first-blog.html">继续阅读 →</a>
+    </article>
 
-  </main>
+    <!-- 最新文章 2 -->
+    <article class="article" data-title="Python 学习笔记 列表复制问题">
+      <h2>
+        <a href="#">Python 学习笔记：列表复制问题</a>
+      </h2>
+      <div class="meta">待更新 / 编程学习 / Python</div>
+      <p class="summary">
+        记录 Python 中 <code>[[0,0]] * n</code> 这种写法为什么可能导致多个元素一起变化。
+      </p>
+      <a class="read-more" href="#">待更新 →</a>
+    </article>
 
-  <footer class="footer">
-    © 2026 枫的学习档案馆 · Powered by GitHub Pages
-  </footer>
+    <!-- 最新文章 3 -->
+    <article class="article" data-title="英语六级作文开头积累">
+      <h2>
+        <a href="#">英语六级作文开头积累</a>
+      </h2>
+      <div class="meta">待更新 / 英语学习 / CET-6</div>
+      <p class="summary">
+        整理一些六级作文中比较自然、好用、不那么模板化的开头表达。
+      </p>
+      <a class="read-more" href="#">待更新 →</a>
+    </article>
 
-  <script src="js/main.js"></script>
+    <!-- 最新文章 4 -->
+    <article class="article" data-title="专业课程学习笔记">
+      <h2>
+        <a href="#">专业课程学习笔记</a>
+      </h2>
+      <div class="meta">待更新 / 专业课 / 学习笔记</div>
+      <p class="summary">
+        用来记录课堂公式、推导过程和一些终于想明白的知识点。
+      </p>
+      <a class="read-more" href="#">待更新 →</a>
+    </article>
+
+    <!-- 最新文章 5 -->
+    <article class="article" data-title="生活随笔 把今天存档">
+      <h2>
+        <a href="#">生活随笔：把今天存档</a>
+      </h2>
+      <div class="meta">待更新 / 生活随笔 / 日常记录</div>
+      <p class="summary">
+        偶尔记录一些生活、想法和阶段总结，把普通的一天也留下痕迹。
+      </p>
+      <a class="read-more" href="#">待更新 →</a>
+    </article>
+
+    <div class="more-box">
+      <a class="read-more" href="archive.html">查看全部文章 →</a>
+    </div>
+
+    <!-- 学习地图 -->
+    <section class="panel" id="map">
+      <h2>学习地图</h2>
+
+      <div class="map-grid">
+        <div class="map-card">
+          <h3>编程学习</h3>
+          <p>Python、代码问题、算法笔记、项目记录。</p>
+        </div>
+
+        <div class="map-card">
+          <h3>英语六级</h3>
+          <p>作文模板、听力方法、阅读技巧、翻译积累。</p>
+        </div>
+
+        <div class="map-card">
+          <h3>专业课程</h3>
+          <p>课堂笔记、公式推导、知识点总结。</p>
+        </div>
+
+        <div class="map-card">
+          <h3>生活随笔</h3>
+          <p>偶尔记录一些生活、想法和阶段总结。</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- 右栏：工具区 -->
+  <aside class="right">
+
+    <section class="note">
+      <h3>今日便签</h3>
+      <p>
+        这个博客刚刚开张。先不追求完美，先让它活起来。
+      </p>
+    </section>
+
+    <section class="panel search-box">
+      <h2>搜索文章</h2>
+      <input type="text" id="searchInput" placeholder="输入关键词，例如 Python">
+    </section>
+
+    <section class="panel" id="tags">
+      <h2>标签墙</h2>
+      <span class="tag">Python</span>
+      <span class="tag">英语六级</span>
+      <span class="tag">专业课程</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">学习笔记</span>
+      <span class="tag">生活随笔</span>
+    </section>
+
+    <section class="panel">
+      <h2>文章归档</h2>
+      <ul class="archive-list">
+        <li><a href="archive.html">查看全部文章</a></li>
+        <li>2026 年 6 月</li>
+        <li>待更新</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>友情链接</h2>
+      <ul class="link-list">
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
+      </ul>
+    </section>
+
+    <section class="panel" id="about">
+      <h2>关于本站</h2>
+      <p>
+        这里不是精装修样板间，而是一个慢慢堆知识、堆想法、堆成长痕迹的小房间。
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>更新记录</h2>
+      <ul class="update-list">
+        <li>2026-06-07：博客首页建立</li>
+        <li>2026-06-07：加入复古档案馆风格</li>
+        <li>2026-06-07：首页设置为最新 5 篇文章</li>
+        <li>待更新：添加更多文章页面</li>
+      </ul>
+    </section>
+
+  </aside>
+
+</main>
+
+<footer class="footer">
+  © 2026 枫的学习档案馆 · Powered by GitHub Pages
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
