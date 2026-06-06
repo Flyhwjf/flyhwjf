@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>枫的个人博客</title>
+  <title>枫的学习档案馆</title>
 
   <style>
     * {
@@ -19,7 +19,6 @@
       font-family: "Microsoft YaHei", Arial, sans-serif;
       color: #2b2b2b;
       line-height: 1.8;
-
       background-color: #f4ead8;
       background-image:
         linear-gradient(rgba(90, 70, 50, 0.08) 1px, transparent 1px),
@@ -33,7 +32,7 @@
     }
 
     .top-bar {
-      max-width: 1240px;
+      max-width: 1260px;
       margin: 26px auto 18px;
       padding: 0 24px;
       display: flex;
@@ -69,11 +68,11 @@
     }
 
     .layout {
-      max-width: 1240px;
+      max-width: 1260px;
       margin: 0 auto;
       padding: 20px 24px 50px;
       display: grid;
-      grid-template-columns: 260px 1fr 260px;
+      grid-template-columns: 270px 1fr 270px;
       gap: 26px;
       align-items: start;
     }
@@ -84,18 +83,26 @@
       box-shadow: 8px 8px 0 rgba(43, 43, 43, 0.9);
       padding: 22px;
       position: relative;
+      margin-bottom: 24px;
     }
 
     .panel::before {
       content: "";
       position: absolute;
-      width: 80px;
+      width: 82px;
       height: 22px;
       background: rgba(255, 211, 80, 0.75);
       top: -14px;
       left: 28px;
       transform: rotate(-4deg);
       border: 1px solid rgba(0,0,0,0.12);
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      font-size: 20px;
+      border-bottom: 3px solid #2b2b2b;
+      padding-bottom: 6px;
     }
 
     .profile-card {
@@ -150,14 +157,54 @@
     .info-list {
       list-style: none;
       padding: 0;
-      margin: 18px 0 0;
-      text-align: left;
+      margin: 14px 0 0;
       font-size: 14px;
     }
 
     .info-list li {
       border-bottom: 2px dashed rgba(43, 43, 43, 0.25);
       padding: 8px 0;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .check-list li {
+      margin: 8px 0;
+    }
+
+    .check-list li::before {
+      content: "☐ ";
+      font-weight: bold;
+    }
+
+    .progress-box {
+      margin-bottom: 14px;
+    }
+
+    .progress-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .bar {
+      height: 12px;
+      border: 2px solid #2b2b2b;
+      background: #fffdf4;
+      margin-top: 5px;
+      box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: #c85c37;
     }
 
     .center-title {
@@ -191,11 +238,11 @@
     }
 
     .article:nth-child(odd) {
-      transform: rotate(0.5deg);
+      transform: rotate(0.4deg);
     }
 
     .article:nth-child(even) {
-      transform: rotate(-0.5deg);
+      transform: rotate(-0.4deg);
     }
 
     .article:hover {
@@ -241,11 +288,73 @@
       transform: translateX(5px);
     }
 
-    .side-title {
+    .pinned {
+      background: #f9d65c;
+    }
+
+    .pinned::after {
+      content: "置顶";
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      background: #c85c37;
+      color: white;
+      border: 3px solid #2b2b2b;
+      padding: 4px 10px;
+      font-weight: bold;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .map-card {
+      background: #fffdf4;
+      border: 3px solid #2b2b2b;
+      box-shadow: 5px 5px 0 #2b2b2b;
+      padding: 18px;
+      transition: 0.2s;
+    }
+
+    .map-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 7px 7px 0 #c85c37;
+    }
+
+    .map-card h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    .map-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .note {
+      background: #f9d65c;
+      border: 3px solid #2b2b2b;
+      box-shadow: 6px 6px 0 #2b2b2b;
+      padding: 18px;
+      margin-bottom: 24px;
+      transform: rotate(2deg);
+    }
+
+    .note h3 {
       margin-top: 0;
-      font-size: 20px;
-      border-bottom: 3px solid #2b2b2b;
-      padding-bottom: 6px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 9px;
+      border: 2px solid #2b2b2b;
+      background: #fffdf4;
+      font-size: 14px;
+      outline: none;
+      box-shadow: 4px 4px 0 #2b2b2b;
     }
 
     .tag {
@@ -265,25 +374,16 @@
       transform: rotate(-4deg);
     }
 
-    .note {
-      background: #f9d65c;
-      border: 3px solid #2b2b2b;
-      box-shadow: 6px 6px 0 #2b2b2b;
-      padding: 18px;
-      margin-bottom: 24px;
-      transform: rotate(2deg);
-    }
-
-    .note h3 {
-      margin-top: 0;
-    }
-
-    .archive-list {
+    .archive-list,
+    .link-list,
+    .update-list {
       padding-left: 20px;
       font-size: 15px;
     }
 
-    .archive-list li {
+    .archive-list li,
+    .link-list li,
+    .update-list li {
       margin-bottom: 8px;
     }
 
@@ -308,7 +408,8 @@
     .panel,
     .article,
     .center-title,
-    .note {
+    .note,
+    .map-card {
       animation: appear 0.7s ease both;
     }
 
@@ -332,6 +433,10 @@
       .nav a {
         margin: 5px;
       }
+
+      .map-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -339,11 +444,12 @@
 <body>
 
   <header class="top-bar">
-    <div class="logo">FENG.LOG</div>
+    <div class="logo">FENG.ARCHIVE</div>
 
     <nav class="nav">
       <a href="index.html">首页</a>
       <a href="#articles">文章</a>
+      <a href="#map">学习地图</a>
       <a href="#tags">标签</a>
       <a href="#about">关于</a>
     </nav>
@@ -371,9 +477,47 @@
         </ul>
       </section>
 
+      <section class="panel">
+        <h2>本周目标</h2>
+        <ul class="check-list">
+          <li>整理一篇 Python 笔记</li>
+          <li>更新一篇英语六级作文积累</li>
+          <li>复习一节专业课内容</li>
+          <li>完善博客文章链接</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>学习进度</h2>
+
+        <div class="progress-box">
+          <div class="progress-title">
+            <span>Python</span>
+            <span>45%</span>
+          </div>
+          <div class="bar"><span style="width: 45%;"></span></div>
+        </div>
+
+        <div class="progress-box">
+          <div class="progress-title">
+            <span>英语六级</span>
+            <span>60%</span>
+          </div>
+          <div class="bar"><span style="width: 60%;"></span></div>
+        </div>
+
+        <div class="progress-box">
+          <div class="progress-title">
+            <span>专业课程</span>
+            <span>35%</span>
+          </div>
+          <div class="bar"><span style="width: 35%;"></span></div>
+        </div>
+      </section>
+
     </aside>
 
-    <!-- 中栏：文章 -->
+    <!-- 中栏：主要内容 -->
     <section class="middle" id="articles">
 
       <div class="center-title">
@@ -381,7 +525,7 @@
         <p>把混乱的知识，一点点整理成可以回头看的东西。</p>
       </div>
 
-      <article class="article">
+      <article class="article pinned" data-title="GitHub Pages 博客搭建记录">
         <h2>
           <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
         </h2>
@@ -392,7 +536,7 @@
         <a class="read-more" href="post/my-first-blog.html">继续阅读 →</a>
       </article>
 
-      <article class="article">
+      <article class="article" data-title="Python 学习笔记 列表复制问题">
         <h2>
           <a href="#">Python 学习笔记：列表复制问题</a>
         </h2>
@@ -403,7 +547,7 @@
         <a class="read-more" href="#">待更新 →</a>
       </article>
 
-      <article class="article">
+      <article class="article" data-title="英语六级作文开头积累">
         <h2>
           <a href="#">英语六级作文开头积累</a>
         </h2>
@@ -414,7 +558,7 @@
         <a class="read-more" href="#">待更新 →</a>
       </article>
 
-      <article class="article">
+      <article class="article" data-title="专业课程学习笔记">
         <h2>
           <a href="#">专业课程学习笔记</a>
         </h2>
@@ -425,9 +569,35 @@
         <a class="read-more" href="#">待更新 →</a>
       </article>
 
+      <section class="panel" id="map">
+        <h2>学习地图</h2>
+
+        <div class="map-grid">
+          <div class="map-card">
+            <h3>编程学习</h3>
+            <p>Python、代码问题、算法笔记、项目记录。</p>
+          </div>
+
+          <div class="map-card">
+            <h3>英语六级</h3>
+            <p>作文模板、听力方法、阅读技巧、翻译积累。</p>
+          </div>
+
+          <div class="map-card">
+            <h3>专业课程</h3>
+            <p>课堂笔记、公式推导、知识点总结。</p>
+          </div>
+
+          <div class="map-card">
+            <h3>生活随笔</h3>
+            <p>偶尔记录一些生活、想法和阶段总结。</p>
+          </div>
+        </div>
+      </section>
+
     </section>
 
-    <!-- 右栏：便签、标签、归档 -->
+    <!-- 右栏：工具区 -->
     <aside class="right">
 
       <section class="note">
@@ -437,8 +607,13 @@
         </p>
       </section>
 
+      <section class="panel search-box">
+        <h2>搜索文章</h2>
+        <input type="text" id="searchInput" placeholder="输入关键词，例如 Python">
+      </section>
+
       <section class="panel" id="tags">
-        <h2 class="side-title">标签墙</h2>
+        <h2>标签墙</h2>
         <span class="tag">Python</span>
         <span class="tag">英语六级</span>
         <span class="tag">专业课程</span>
@@ -448,18 +623,35 @@
       </section>
 
       <section class="panel">
-        <h2 class="side-title">文章归档</h2>
+        <h2>文章归档</h2>
         <ul class="archive-list">
           <li>2026 年 6 月</li>
           <li>待更新</li>
         </ul>
       </section>
 
+      <section class="panel">
+        <h2>友情链接</h2>
+        <ul class="link-list">
+          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+          <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
+        </ul>
+      </section>
+
       <section class="panel" id="about">
-        <h2 class="side-title">关于本站</h2>
+        <h2>关于本站</h2>
         <p>
           这里不是精装修样板间，而是一个慢慢堆知识、堆想法、堆成长痕迹的小房间。
         </p>
+      </section>
+
+      <section class="panel">
+        <h2>更新记录</h2>
+        <ul class="update-list">
+          <li>2026-06-07：博客首页建立</li>
+          <li>2026-06-07：加入复古档案馆风格</li>
+          <li>待更新：添加更多文章页面</li>
+        </ul>
       </section>
 
     </aside>
@@ -467,8 +659,28 @@
   </main>
 
   <footer class="footer">
-    © 2026 枫的个人博客 · Powered by GitHub Pages
+    © 2026 枫的学习档案馆 · Powered by GitHub Pages
   </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const articles = document.querySelectorAll(".article");
+
+    searchInput.addEventListener("input", function () {
+      const keyword = this.value.trim().toLowerCase();
+
+      articles.forEach(article => {
+        const title = article.dataset.title.toLowerCase();
+        const text = article.innerText.toLowerCase();
+
+        if (title.includes(keyword) || text.includes(keyword)) {
+          article.style.display = "block";
+        } else {
+          article.style.display = "none";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
