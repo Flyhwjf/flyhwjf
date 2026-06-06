@@ -52,7 +52,7 @@ function updateArchiveList() {
       currentCategory === "all" || category === currentCategory;
 
     if (matchKeyword && matchCategory) {
-      item.style.display = "grid";
+      item.style.display = "";
       visibleCount++;
     } else {
       item.style.display = "none";
