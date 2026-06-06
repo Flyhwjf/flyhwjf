@@ -666,4 +666,87 @@ code {
     gap: 4px;
   }
 }
+
+/* 归档页：两列布局显示文章 */
+.archive-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 16px;
+  align-items: start;
+  background: #fffdf4;
+  border: 3px solid #2b2b2b;
+  box-shadow: 7px 7px 0 #2b2b2b;
+  padding: 18px;
+  transition: 0.2s;
+  margin-bottom: 0; /* 网格间距用 gap 控制 */
+}
+
+.archive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0 #c85c37;
+}
+
+.archive-index {
+  background: #f9d65c;
+  border: 3px solid #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
+  text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 8px 0;
+}
+
+.archive-main h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.archive-main h2 a:hover {
+  color: #c85c37;
+}
+
+.archive-category {
+  grid-column: 1 / 3; /* 跨两列显示分类 */
+  justify-self: start;
+  background: #fff8e7;
+  border: 2px solid #2b2b2b;
+  box-shadow: 3px 3px 0 #2b2b2b;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* 手机端自动变回一列 */
+@media (max-width: 900px) {
+  .archive-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-item {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-index {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .archive-category {
+    justify-self: start;
+  }
+
+  .archive-month-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
 }
