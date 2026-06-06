@@ -10,186 +10,327 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      background: #f3f6fb;
-      color: #333;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #2b2b2b;
       line-height: 1.8;
+
+      background-color: #f4ead8;
+      background-image:
+        linear-gradient(rgba(90, 70, 50, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(90, 70, 50, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
     }
 
     a {
-      color: #2563eb;
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .top {
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 18px 0;
-      margin-bottom: 25px;
-    }
-
-    .top-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    .top-bar {
+      max-width: 1240px;
+      margin: 26px auto 18px;
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .site-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #1f2937;
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      background: #2b2b2b;
+      color: #f7e8c8;
+      padding: 8px 18px;
+      transform: rotate(-2deg);
+      box-shadow: 6px 6px 0 #c85c37;
     }
 
     .nav a {
-      margin-left: 18px;
-      color: #4b5563;
-      font-size: 15px;
+      display: inline-block;
+      margin-left: 12px;
+      padding: 6px 14px;
+      border: 2px solid #2b2b2b;
+      background: #fff8e7;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s;
     }
 
-    .container {
-      max-width: 1200px;
+    .nav a:hover {
+      transform: translateY(-3px) rotate(-2deg);
+      background: #f9d65c;
+    }
+
+    .layout {
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 20px 40px;
+      padding: 20px 24px 50px;
       display: grid;
       grid-template-columns: 260px 1fr 260px;
-      gap: 24px;
+      gap: 26px;
+      align-items: start;
     }
 
-    .card {
-      background: white;
-      border-radius: 16px;
+    .panel {
+      background: #fff8e7;
+      border: 3px solid #2b2b2b;
+      box-shadow: 8px 8px 0 rgba(43, 43, 43, 0.9);
       padding: 22px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-      margin-bottom: 22px;
+      position: relative;
     }
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 20px;
-      color: #1f2937;
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 8px;
+    .panel::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 22px;
+      background: rgba(255, 211, 80, 0.75);
+      top: -14px;
+      left: 28px;
+      transform: rotate(-4deg);
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
-    .profile {
+    .profile-card {
       text-align: center;
+      transform: rotate(-1deg);
     }
 
     .avatar {
-      width: 95px;
-      height: 95px;
+      width: 104px;
+      height: 104px;
+      margin: 8px auto 16px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #60a5fa, #818cf8);
-      color: white;
-      font-size: 42px;
-      font-weight: bold;
+      border: 3px solid #2b2b2b;
+      background:
+        radial-gradient(circle at 35% 30%, #fff 0 8%, transparent 9%),
+        linear-gradient(135deg, #f9d65c, #c85c37);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 15px;
+      font-size: 44px;
+      font-weight: 900;
+      color: #2b2b2b;
+      box-shadow: 5px 5px 0 #2b2b2b;
+      transition: 0.3s;
+    }
+
+    .avatar:hover {
+      transform: rotate(8deg) scale(1.06);
     }
 
     .name {
-      font-size: 22px;
-      font-weight: bold;
-      color: #1f2937;
-      margin-bottom: 8px;
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 6px;
     }
 
-    .intro {
-      color: #666;
-      font-size: 15px;
+    .motto {
+      font-size: 14px;
+      background: #f9d65c;
+      display: inline-block;
+      padding: 3px 10px;
+      border: 2px solid #2b2b2b;
+      margin-bottom: 16px;
+    }
+
+    .profile-text {
       text-align: left;
+      font-size: 15px;
+      color: #3f3f3f;
     }
 
     .info-list {
-      padding: 0;
       list-style: none;
-      font-size: 15px;
-      color: #555;
+      padding: 0;
+      margin: 18px 0 0;
+      text-align: left;
+      font-size: 14px;
     }
 
     .info-list li {
-      margin-bottom: 8px;
+      border-bottom: 2px dashed rgba(43, 43, 43, 0.25);
+      padding: 8px 0;
+    }
+
+    .center-title {
+      margin: 0 0 24px;
+      padding: 20px;
+      border: 3px solid #2b2b2b;
+      background: #2b2b2b;
+      color: #fff8e7;
+      box-shadow: 8px 8px 0 #c85c37;
+    }
+
+    .center-title h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 2px;
+    }
+
+    .center-title p {
+      margin: 8px 0 0;
+      color: #f5dca6;
     }
 
     .article {
-      padding: 18px 0;
-      border-bottom: 1px solid #f1f5f9;
+      background: #fffdf4;
+      border: 3px solid #2b2b2b;
+      margin-bottom: 22px;
+      padding: 24px;
+      box-shadow: 7px 7px 0 #2b2b2b;
+      position: relative;
+      transition: 0.22s;
     }
 
-    .article:last-child {
-      border-bottom: none;
+    .article:nth-child(odd) {
+      transform: rotate(0.5deg);
     }
 
-    .article h3 {
-      margin: 0 0 6px;
-      font-size: 21px;
+    .article:nth-child(even) {
+      transform: rotate(-0.5deg);
     }
 
-    .article h3 a {
-      color: #1f2937;
+    .article:hover {
+      transform: translateY(-6px) rotate(0deg);
+      box-shadow: 11px 11px 0 #c85c37;
     }
 
-    .article h3 a:hover {
-      color: #2563eb;
+    .article h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    .article h2 a:hover {
+      color: #c85c37;
     }
 
     .meta {
-      color: #888;
       font-size: 14px;
-      margin-bottom: 8px;
+      color: #6b5b4b;
+      margin-bottom: 10px;
     }
 
     .summary {
-      color: #555;
       margin: 0;
+      color: #444;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 5px 12px;
+      background: #f9d65c;
+      border: 2px solid #2b2b2b;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .read-more:hover {
+      background: #c85c37;
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .side-title {
+      margin-top: 0;
+      font-size: 20px;
+      border-bottom: 3px solid #2b2b2b;
+      padding-bottom: 6px;
     }
 
     .tag {
       display: inline-block;
-      background: #eef2ff;
-      color: #4f46e5;
-      padding: 5px 11px;
-      border-radius: 999px;
+      border: 2px solid #2b2b2b;
+      background: #fffdf4;
+      padding: 5px 10px;
+      margin: 5px 4px;
       font-size: 14px;
-      margin: 5px 5px 5px 0;
+      font-weight: bold;
+      box-shadow: 3px 3px 0 #2b2b2b;
+      transition: 0.2s;
     }
 
-    .notice {
-      color: #555;
+    .tag:hover {
+      background: #f9d65c;
+      transform: rotate(-4deg);
+    }
+
+    .note {
+      background: #f9d65c;
+      border: 3px solid #2b2b2b;
+      box-shadow: 6px 6px 0 #2b2b2b;
+      padding: 18px;
+      margin-bottom: 24px;
+      transform: rotate(2deg);
+    }
+
+    .note h3 {
+      margin-top: 0;
+    }
+
+    .archive-list {
+      padding-left: 20px;
       font-size: 15px;
     }
 
-    .footer {
-      max-width: 1200px;
-      margin: 20px auto 40px;
-      text-align: center;
-      color: #888;
-      font-size: 14px;
+    .archive-list li {
+      margin-bottom: 8px;
     }
 
-    @media (max-width: 900px) {
-      .container {
+    .footer {
+      text-align: center;
+      padding: 28px;
+      font-size: 14px;
+      color: #5c5146;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .panel,
+    .article,
+    .center-title,
+    .note {
+      animation: appear 0.7s ease both;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
         grid-template-columns: 1fr;
       }
 
-      .top-inner {
+      .profile-card,
+      .article:nth-child(odd),
+      .article:nth-child(even),
+      .note {
+        transform: none;
+      }
+
+      .top-bar {
         flex-direction: column;
-        gap: 10px;
+        gap: 18px;
       }
 
       .nav a {
-        margin: 0 8px;
+        margin: 5px;
       }
     }
   </style>
@@ -197,117 +338,127 @@
 
 <body>
 
-  <header class="top">
-    <div class="top-inner">
-      <div class="site-title">枫的个人博客</div>
+  <header class="top-bar">
+    <div class="logo">FENG.LOG</div>
 
-      <nav class="nav">
-        <a href="index.html">首页</a>
-        <a href="#articles">文章</a>
-        <a href="#categories">分类</a>
-        <a href="#about">关于</a>
-      </nav>
-    </div>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="#articles">文章</a>
+      <a href="#tags">标签</a>
+      <a href="#about">关于</a>
+    </nav>
   </header>
 
-  <main class="container">
+  <main class="layout">
 
-    <!-- 左边：个人信息 -->
+    <!-- 左栏：个人档案 -->
     <aside class="left">
 
-      <section class="card profile">
+      <section class="panel profile-card">
         <div class="avatar">枫</div>
         <div class="name">枫</div>
-        <p class="intro">
-          一名学生。这里记录学习笔记、编程过程、英语积累和生活想法。
-        </p>
-      </section>
+        <div class="motto">学习中，请勿打扰</div>
 
-      <section class="card">
-        <h2>个人信息</h2>
+        <p class="profile-text">
+          一名学生。这个博客用来存放学习笔记、编程记录、英语积累和一些突然冒出来的想法。
+        </p>
+
         <ul class="info-list">
-          <li>身份：学生</li>
-          <li>方向：学习 / 编程 / 英语</li>
-          <li>博客：GitHub Pages</li>
-          <li>状态：持续学习中</li>
+          <li><strong>身份：</strong>学生</li>
+          <li><strong>方向：</strong>编程 / 英语 / 专业课</li>
+          <li><strong>状态：</strong>持续施工中</li>
+          <li><strong>网站：</strong>GitHub Pages</li>
         </ul>
       </section>
 
     </aside>
 
-    <!-- 中间：文章列表 -->
+    <!-- 中栏：文章 -->
     <section class="middle" id="articles">
 
-      <section class="card">
-        <h2>最新文章</h2>
+      <div class="center-title">
+        <h1>枫的学习档案馆</h1>
+        <p>把混乱的知识，一点点整理成可以回头看的东西。</p>
+      </div>
 
-        <article class="article">
-          <h3>
-            <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
-          </h3>
-          <div class="meta">2026-06-07 · 博客搭建</div>
-          <p class="summary">
-            记录我如何使用 GitHub Pages 搭建自己的第一个个人博客。
-          </p>
-        </article>
+      <article class="article">
+        <h2>
+          <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
+        </h2>
+        <div class="meta">2026-06-07 / 博客搭建 / GitHub Pages</div>
+        <p class="summary">
+          记录我如何用 GitHub Pages 搭建自己的第一个个人博客，从创建仓库到部署成功。
+        </p>
+        <a class="read-more" href="post/my-first-blog.html">继续阅读 →</a>
+      </article>
 
-        <article class="article">
-          <h3>
-            <a href="#">Python 学习笔记：列表复制问题</a>
-          </h3>
-          <div class="meta">待更新 · 编程学习</div>
-          <p class="summary">
-            记录 Python 中 [[0,0]] * n 这种写法可能出现的问题。
-          </p>
-        </article>
+      <article class="article">
+        <h2>
+          <a href="#">Python 学习笔记：列表复制问题</a>
+        </h2>
+        <div class="meta">待更新 / 编程学习 / Python</div>
+        <p class="summary">
+          记录 Python 中 [[0,0]] * n 这种写法为什么可能导致多个元素一起变化。
+        </p>
+        <a class="read-more" href="#">待更新 →</a>
+      </article>
 
-        <article class="article">
-          <h3>
-            <a href="#">英语六级作文开头积累</a>
-          </h3>
-          <div class="meta">待更新 · 英语学习</div>
-          <p class="summary">
-            整理一些六级作文中比较常用、自然的开头表达。
-          </p>
-        </article>
+      <article class="article">
+        <h2>
+          <a href="#">英语六级作文开头积累</a>
+        </h2>
+        <div class="meta">待更新 / 英语学习 / CET-6</div>
+        <p class="summary">
+          整理一些六级作文中比较自然、好用、不那么模板化的开头表达。
+        </p>
+        <a class="read-more" href="#">待更新 →</a>
+      </article>
 
-        <article class="article">
-          <h3>
-            <a href="#">专业课程学习笔记</a>
-          </h3>
-          <div class="meta">待更新 · 专业课程</div>
-          <p class="summary">
-            用来整理课堂知识、公式推导和自己的理解。
-          </p>
-        </article>
-
-      </section>
+      <article class="article">
+        <h2>
+          <a href="#">专业课程学习笔记</a>
+        </h2>
+        <div class="meta">待更新 / 专业课 / 学习笔记</div>
+        <p class="summary">
+          用来记录课堂公式、推导过程和一些终于想明白的知识点。
+        </p>
+        <a class="read-more" href="#">待更新 →</a>
+      </article>
 
     </section>
 
-    <!-- 右边：分类和公告 -->
+    <!-- 右栏：便签、标签、归档 -->
     <aside class="right">
 
-      <section class="card" id="categories">
-        <h2>文章分类</h2>
-        <span class="tag">编程学习</span>
-        <span class="tag">Python</span>
-        <span class="tag">英语六级</span>
-        <span class="tag">专业课程</span>
-        <span class="tag">生活随笔</span>
-      </section>
-
-      <section class="card">
-        <h2>公告</h2>
-        <p class="notice">
-          博客刚刚建立，目前还在慢慢完善中。以后会陆续更新学习笔记和文章。
+      <section class="note">
+        <h3>今日便签</h3>
+        <p>
+          这个博客刚刚开张。先不追求完美，先让它活起来。
         </p>
       </section>
 
-      <section class="card" id="about">
-        <h2>关于博客</h2>
-        <p class="notice">
-          写博客不是为了显得很厉害，而是为了把学过的东西整理下来，方便以后回顾。
+      <section class="panel" id="tags">
+        <h2 class="side-title">标签墙</h2>
+        <span class="tag">Python</span>
+        <span class="tag">英语六级</span>
+        <span class="tag">专业课程</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">学习笔记</span>
+        <span class="tag">生活随笔</span>
+      </section>
+
+      <section class="panel">
+        <h2 class="side-title">文章归档</h2>
+        <ul class="archive-list">
+          <li>2026 年 6 月</li>
+          <li>待更新</li>
+        </ul>
+      </section>
+
+      <section class="panel" id="about">
+        <h2 class="side-title">关于本站</h2>
+        <p>
+          这里不是精装修样板间，而是一个慢慢堆知识、堆想法、堆成长痕迹的小房间。
         </p>
       </section>
 
