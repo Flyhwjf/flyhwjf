@@ -468,4 +468,42 @@ code {
   .map-grid {
     grid-template-columns: 1fr;
   }
+
+.more-box {
+  text-align: center;
+  margin: 26px 0;
+}
+
+.archive-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 24px 50px;
+}
+
+.archive-year {
+  margin-bottom: 28px;
+}
+
+.archive-item {
+  background: #fffdf4;
+  border: 3px solid #2b2b2b;
+  box-shadow: 6px 6px 0 #2b2b2b;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  transition: 0.2s;
+}
+
+.archive-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 9px 9px 0 #c85c37;
+}
+
+.archive-item h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.archive-item h2 a:hover {
+  color: #c85c37;
+}
 }
