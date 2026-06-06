@@ -2,52 +2,322 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>白湍涡的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>枫的个人博客</title>
+
   <style>
-    body {
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.8;
-      background-color: #f7f7f7;
-      color: #333;
+    * {
+      box-sizing: border-box;
     }
 
-    h1 {
-      color: #2c3e50;
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: #f3f6fb;
+      color: #333;
+      line-height: 1.8;
     }
 
     a {
-      color: #0969da;
+      color: #2563eb;
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .top {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 18px 0;
+      margin-bottom: 25px;
+    }
+
+    .top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    .nav a {
+      margin-left: 18px;
+      color: #4b5563;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      display: grid;
+      grid-template-columns: 260px 1fr 260px;
+      gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #1f2937;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #60a5fa, #818cf8);
+      color: white;
+      font-size: 42px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1f2937;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      color: #666;
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .info-list {
+      padding: 0;
+      list-style: none;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .info-list li {
+      margin-bottom: 8px;
+    }
+
+    .article {
+      padding: 18px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .article:last-child {
+      border-bottom: none;
+    }
+
+    .article h3 {
+      margin: 0 0 6px;
+      font-size: 21px;
+    }
+
+    .article h3 a {
+      color: #1f2937;
+    }
+
+    .article h3 a:hover {
+      color: #2563eb;
+    }
+
+    .meta {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      color: #555;
+      margin: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f46e5;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin: 5px 5px 5px 0;
+    }
+
+    .notice {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .footer {
+      max-width: 1200px;
+      margin: 20px auto 40px;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .top-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav a {
+        margin: 0 8px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>枫的个人博客</h1>
-    <p>你好，这里是白湍涡的气象小家，用来记录学习和生活。</p>
-  </div>
 
-  <div class="card">
-    <h2>文章列表</h2>
-    <ul>
-      <li><a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a></li>
-    </ul>
-  </div>
+  <header class="top">
+    <div class="top-inner">
+      <div class="site-title">枫的个人博客</div>
 
-  <div class="card">
-    <h2>关于我</h2>
-    <p>目前是一名学生，正在学习编程、英语和专业课程。</p>
-  </div>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="#articles">文章</a>
+        <a href="#categories">分类</a>
+        <a href="#about">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 左边：个人信息 -->
+    <aside class="left">
+
+      <section class="card profile">
+        <div class="avatar">枫</div>
+        <div class="name">枫</div>
+        <p class="intro">
+          一名学生。这里记录学习笔记、编程过程、英语积累和生活想法。
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>个人信息</h2>
+        <ul class="info-list">
+          <li>身份：学生</li>
+          <li>方向：学习 / 编程 / 英语</li>
+          <li>博客：GitHub Pages</li>
+          <li>状态：持续学习中</li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <!-- 中间：文章列表 -->
+    <section class="middle" id="articles">
+
+      <section class="card">
+        <h2>最新文章</h2>
+
+        <article class="article">
+          <h3>
+            <a href="post/my-first-blog.html">我的第一篇博客：GitHub Pages 搭建记录</a>
+          </h3>
+          <div class="meta">2026-06-07 · 博客搭建</div>
+          <p class="summary">
+            记录我如何使用 GitHub Pages 搭建自己的第一个个人博客。
+          </p>
+        </article>
+
+        <article class="article">
+          <h3>
+            <a href="#">Python 学习笔记：列表复制问题</a>
+          </h3>
+          <div class="meta">待更新 · 编程学习</div>
+          <p class="summary">
+            记录 Python 中 [[0,0]] * n 这种写法可能出现的问题。
+          </p>
+        </article>
+
+        <article class="article">
+          <h3>
+            <a href="#">英语六级作文开头积累</a>
+          </h3>
+          <div class="meta">待更新 · 英语学习</div>
+          <p class="summary">
+            整理一些六级作文中比较常用、自然的开头表达。
+          </p>
+        </article>
+
+        <article class="article">
+          <h3>
+            <a href="#">专业课程学习笔记</a>
+          </h3>
+          <div class="meta">待更新 · 专业课程</div>
+          <p class="summary">
+            用来整理课堂知识、公式推导和自己的理解。
+          </p>
+        </article>
+
+      </section>
+
+    </section>
+
+    <!-- 右边：分类和公告 -->
+    <aside class="right">
+
+      <section class="card" id="categories">
+        <h2>文章分类</h2>
+        <span class="tag">编程学习</span>
+        <span class="tag">Python</span>
+        <span class="tag">英语六级</span>
+        <span class="tag">专业课程</span>
+        <span class="tag">生活随笔</span>
+      </section>
+
+      <section class="card">
+        <h2>公告</h2>
+        <p class="notice">
+          博客刚刚建立，目前还在慢慢完善中。以后会陆续更新学习笔记和文章。
+        </p>
+      </section>
+
+      <section class="card" id="about">
+        <h2>关于博客</h2>
+        <p class="notice">
+          写博客不是为了显得很厉害，而是为了把学过的东西整理下来，方便以后回顾。
+        </p>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 枫的个人博客 · Powered by GitHub Pages
+  </footer>
+
 </body>
 </html>
